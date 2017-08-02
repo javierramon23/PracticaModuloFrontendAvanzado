@@ -1,0 +1,25 @@
+{
+  "name": "PracticaModuloFrontendAvanzado",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene la práctica del módulo 3 del BootCamp.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierramon23/PracticaModuloFrontendAvanzado.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javierramon23/PracticaModuloFrontendAvanzado/issues"
+  },
+  "homepage": "https://github.com/javierramon23/PracticaModuloFrontendAvanzado#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-html-import": "0.0.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
