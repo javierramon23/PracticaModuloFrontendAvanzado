@@ -5,7 +5,7 @@ var browserSync = require("browser-sync").create();
 var notify = require("gulp-notify");
 var htmlImport = require("gulp-html-import");
 
-//
+// Browserify y Babelify:
 var tap = require("gulp-tap");
 var buffer = require("gulp-buffer");
 var browserify = require("browserify");
@@ -13,15 +13,19 @@ var browserify = require("browserify");
 // Para identificar errores de código.
 var sourcemaps = require("gulp-sourcemaps");
 
-// Para Minificar el código.
+// Para MINIFICAR el código:
 // Minificar CSS.
 var postcss = require("gulp-postcss")
 var autoprefixer =require("autoprefixer");
 var cssnano = require("cssnano");
-// Mini
+// Minificar HTML.
 var htmlMin = require("gulp-htmlmin");
-
+// Minificar JS.
 var uglify = require("gulp-uglify");
+
+// Responsive y Optimizacion de imagenes:
+var responsive = require("gulp-responsive");
+var imagemin = require("gulp-imagemin");
 
 // Sentencias WATCH.
 gulp.watch(["src/scss/*.scss","src/scss/**/*.scss"],["sass"]);
@@ -29,6 +33,7 @@ gulp.watch(["src/html/*.html","src/html/**/*.html"],["html"]);
 gulp.watch(["src/js/*.js","src/js/**/*.js"],["js"]);
 
 // Default Task.
+// Tarea que se ejecuta en caso de no especificar ninguna en concreto.
 gulp.task("default",["sass", "html", "js", "img"], function() {
     browserSync.init({
         server: "dist/",
@@ -41,7 +46,7 @@ gulp.task("sass", function() {
     gulp.src("src/scss/style.scss")
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", function(error) {
-        console.log("Se ha producido un error.")
+        notify().write(error);
     }))
     .pipe(postcss([
         autoprefixer(),
@@ -67,13 +72,14 @@ gulp.task("html", function() {
 gulp.task("js", function() {
     gulp.src("src/js/main.js")
     /*
+     * 
      */
     .pipe(tap(function(file) {
         file.contents = browserify(file.path, {debug: true})
                         // Para hacer el código ES6 compatible con ES5.
                         .transform("babelify", {presets: ["es2015"]})
                         .bundle().on("error", function(error) {
-                            return notify().write(error);
+                            notify().write(error);
                         })
     }))
     .pipe(buffer())
@@ -88,7 +94,15 @@ gulp.task("js", function() {
 // Images Task.
 gulp.task("img", function() {
     gulp.src("src/img/*")
-    .pipe(gulp.dest("dist/"))
+    .pipe(responsive({
+        "*.png":[
+            {width: 150, rename: {sufix: "150px"}},
+            {width: 250, rename: {sufix: "250px"}},
+            {width: 300, rename: {sufix: "300px"}}
+        ]
+    }))
+    .pipe(imagemin())
+    .pipe(gulp.dest("dist/images"))
     .pipe(browserSync.stream())
     .pipe(notify("Imagenes cargadas con exito."))
 });
