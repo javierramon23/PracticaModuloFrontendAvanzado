@@ -1,1 +1,8 @@
 // Fichero Principal de Estilos SASS.
+// Se importan los "partials" scss.
+
+@import "reset";
+
+@import "variables";
+@import "html_tags";
+@import "components/header";

@@ -1,0 +1,70 @@
+.web_header {
+    width: 100%;
+    position: fixed;
+    font-family: $main_font_family;
+
+    .header_top {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        color: $color_slate_gray;
+
+        .search_article {
+            width: 50%;
+            font-size: $font_size_small;
+        }
+
+        .web_login {
+            width: 50%;
+            text-align: right;
+            padding-top: 5px;
+            font-size: $font_size_small;
+        }
+    }
+
+    .title {
+        background-image: url("./img/headBackground.jpg");
+        background-size:cover;
+        width: 100%;
+        height: 100px;
+
+        /* Flexbox */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .web_logo {
+            box-sizing: border-box;
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+
+            .img_logo {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .web_title {
+            padding-right: 10px;
+            font-size: $font_size_H1;
+            font-family: $title_font_family;
+
+            .admiration {
+                color: red;
+            }
+
+        }
+    }
+
+    .main_menu {
+        text-align: center;
+        
+        /* Flexbox*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

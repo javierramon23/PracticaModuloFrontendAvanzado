@@ -1,0 +1,34 @@
+// Importamos Fuentes 
+@font-face {
+    font-family: "Bariol";
+    src: url("./fonts/BariolRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bariol_Bold";
+    src: url("./fonts/BariolBold.otf") format("truetype");
+}
+
+// Tipos de Fuentes.
+$title_font_family: "Bariol_Bold";
+$main_font_family: "Bariol";
+$body_font_family: "Calibri";
+
+// Tamaño Base Fuentes:
+$font_size_base: 15px;
+$font_size_small: $font_size_base - 3px;
+$font_size_large: $font_size_base + 3px;
+
+// Tamaño TAG'S <H>
+$font_size_H1: $font_size_base + 20px;
+$font_size_H2: $font_size_base + 15px;
+$font_size_H3: $font_size_base + 10px;
+$font_size_H4: $font_size_base + 5px;
+$font_size_H5: $font_size_base;
+
+// Paleta de Colores:
+$color_pale_lavender: #E3D7FF;
+$color_blue_purple: #AFA2FF;
+$color_air_superiority_blue: #7A89C2;
+$color_slate_gray: #72788D;
+$color_black_leather_jacket: #2D312D;

@@ -94,15 +94,15 @@ gulp.task("js", function() {
 // Images Task.
 gulp.task("img", function() {
     gulp.src("src/img/*")
-    .pipe(responsive({
-        "*.png":[
-            {width: 150, rename: {sufix: "150px"}},
-            {width: 250, rename: {sufix: "250px"}},
-            {width: 300, rename: {sufix: "300px"}}
-        ]
-    }))
+    //.pipe(responsive({
+        //"*.png":[
+            //{width: 150, rename: {sufix: "150px"}},
+            //{width: 250, rename: {sufix: "250px"}},
+            //{width: 300, rename: {sufix: "300px"}}
+        //]
+    //}))
     .pipe(imagemin())
-    .pipe(gulp.dest("dist/images"))
+    .pipe(gulp.dest("dist/img"))
     .pipe(browserSync.stream())
     .pipe(notify("Imagenes cargadas con exito."))
 });
