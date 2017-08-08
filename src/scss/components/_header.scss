@@ -9,10 +9,13 @@
         display: flex;
         flex-direction: row;
         color: $color_slate_gray;
+        background: white;
 
         .search_article {
             width: 50%;
-            font-size: $font_size_small;
+            text-align: left;
+            font-size: $font_size_base;
+            color: $color_black_leather_jacket;
         }
 
         .web_login {
@@ -59,11 +62,14 @@
         }
     }
 
-    .main_menu {       
+    .main_menu {   
+        background: white;
+        
         /* Flexbox*/
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+
     }
 }

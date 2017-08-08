@@ -1,3 +1,26 @@
 .articles_list {
-    margin-top: 60px;
+    margin-top: 200px;
+
+    .article {
+        box-sizing: border-box;
+        width: 100%;
+        max-height: 150px;
+        padding: 5px;
+        font-family: $body_font_family;
+        font-size: $font_size_base;
+        color: $color_slate_gray;
+
+        display: flex;
+
+        .article_img {
+            width: 40%;
+            height: auto;
+        }
+
+        .article_info {
+            box-sizing: border-box;
+            padding: 10px;
+            width: 60%;
+        }
+    }
 }
