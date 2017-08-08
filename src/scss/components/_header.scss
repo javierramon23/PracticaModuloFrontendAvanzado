@@ -1,6 +1,7 @@
 .web_header {
     width: 100%;
     position: fixed;
+    top: 0px;
     font-family: $main_font_family;
 
     .header_top {
@@ -58,9 +59,7 @@
         }
     }
 
-    .main_menu {
-        text-align: center;
-        
+    .main_menu {       
         /* Flexbox*/
         display: flex;
         flex-direction: row;

@@ -1,0 +1,24 @@
+.footer {
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 5px;
+    font-size: $font_size_base;
+    font-family: $title_font_family;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer_title {
+
+    }
+
+    .back_link {
+
+    }
+}
