@@ -1,72 +1,70 @@
 .articles_list {
     box-sizing: border-box;
-    margin-top: 200px;
-    padding: 5px;
+    margin-top: 180px;
+    padding: 10px;
+
 
     .article {
         box-sizing: border-box;
         width: 100%;
-        max-height: 200px;
-        padding: 5px;
+        max-height: 150px;
+        border: 1px solid $color_slate_gray;
+        border-radius: 10px;
         font-family: $body_font_family;
         font-size: $font_size_small;
         color: $color_black_leather_jacket;
-        border: 3px solid $color_slate_gray;
-        border-radius: 10px;
+
 
         /* Flexbox */
         display: flex;
+        justify-content: space-around;
+        align-items: center;
 
         .article_img {
-            width: 40%;
-            height: 100%;
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+            max-height: 150px; 
+            border-radius: 10px;
         }
 
         .article_info {
-            box-sizing: border-box;
-            padding: 2px;
-            width: 60%;
+            width: 70%;
+            padding: 10px;
 
             .article_title {
-                padding: 2px;
-                font-weight: bold;
             }
 
             .article_summary {
-                padding: 2px;
             }
 
             .article_date {
-                padding: 5px 0 0 2px;
             }
 
             .article_comments {
-                padding: 5px 0 0 2px;
             }
 
             .article_author {
+
                 /* Flexbox */
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
 
                 .author_name {
-                    font-weight: bold;
                 }
 
                 .author_img {
                     width: 100%;
+                    height: auto;
                     max-width: 30px;
                     max-height: 30px;
-                    height: auto;
-                    padding: 2px;
                 }
             }
 
             .like_button {
                 border: 2px solid $color_slate_gray;
                 border-radius: 5px;
-                padding: 5px;
                 float:right;
             }
         }
