@@ -32,3 +32,16 @@ $color_blue_purple: #AFA2FF;
 $color_air_superiority_blue: #7A89C2;
 $color_slate_gray: #CCCCCC;
 $color_black_leather_jacket: #2D312D;
+
+// Dimensiones dispositivos.
+// Smartphone:
+$smartphone_portrait_width: 375px;                          // Vertical.
+$smartphone_landscape_width: 667px;                         // Horizonta.
+// Tablet:
+$tablet_portrait_width: $smartphone_landscape_width + 1;    // Vertical.
+$tablet_landscape_width: 1024px;                            // Horizontal.
+
+/* 
+Cualquier "width" superior a 1024px se considera PC,TV, etc,
+es decir, Desktop
+*/

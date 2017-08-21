@@ -1,14 +1,14 @@
 // Fichero Principal de Estilos SASS.
 // Se importan los "partials" scss.
-
-
 @import "reset";
 
 @import "font_awesome/font-awesome";
 
 @import "variables";
+@import "responsive_utils";
 @import "html_tags";
 @import "components/header";
 @import "components/container";
 @import "components/articles_list";
 @import "components/footer";
+@import "components/details"

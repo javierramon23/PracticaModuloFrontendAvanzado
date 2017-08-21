@@ -1,0 +1,30 @@
+@mixin if_mobile_portrait {
+    @media (max-width: #{$smartphone_portrait_width}){
+        @content;
+    }
+}
+
+@mixin if_mobile_landscape {
+    @media (min-width: #{$smartphone_landscape_width} + 1){
+        @content;
+    }   
+}
+
+@mixin if_tablet_portrait {
+    @media (min-width: #{$tablet_portrait_width} - 1){
+        @content;
+    }   
+}
+
+@mixin if_tablet_landscape {
+    @media (min-width: #{$tablet_landscape_width}){
+        @content;
+    }   
+}
+
+@mixin if_desktop {
+    @include if_tablet_landscape() {
+        @content;
+    }
+}
+
