@@ -5,13 +5,13 @@
 }
 
 @mixin if_mobile_landscape {
-    @media (min-width: #{$smartphone_landscape_width} + 1){
+    @media (min-width: #{$smartphone_landscape_width}){
         @content;
     }   
 }
 
 @mixin if_tablet_portrait {
-    @media (min-width: #{$tablet_portrait_width} - 1){
+    @media (min-width: #{$tablet_portrait_width}){
         @content;
     }   
 }

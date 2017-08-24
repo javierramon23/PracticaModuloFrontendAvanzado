@@ -1,21 +1,33 @@
 // Importamos Fuentes 
 @font-face {
     font-family: "Bariol";
-    src: url("./fonts/BariolRegular.ttf") format("truetype");
+    src: url("./fonts/Bariol_Font/Bariol_Regular.otf") format("truetype");
 }
 
 @font-face {
     font-family: "Bariol_Bold";
-    src: url("./fonts/BariolBold.otf") format("truetype");
+    src: url("./fonts/Bariol_Font/Bariol_Bold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bariol_Italic";
+    src: url("./fonts/Bariol_Font/Bariol_Italic.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bariol_Bold_Italic";
+    src: url("./fonts/Bariol_Font/Bariol_Bold_Italic.otf") format("truetype");
 }
 
 // Tipos de Fuentes.
-$title_font_family: "Bariol_Bold";
-$main_font_family: "Bariol";
-$body_font_family: "Calibri";
+$custom_font_family: "Bariol";
+$custom_font_family_bold: "Bariol_Bold";
+$custom_font_family_italic: "Bariol_Italic";
+$custom_font_family_italic: "Bariol__Bold_Italic";
+$second_font_family: "Calibri";
 
 // Tamaño Base Fuentes:
-$font_size_base: 15px;
+$font_size_base: 12px;
 $font_size_small: $font_size_base - 3px;
 $font_size_large: $font_size_base + 3px;
 
@@ -32,6 +44,7 @@ $color_blue_purple: #AFA2FF;
 $color_air_superiority_blue: #7A89C2;
 $color_slate_gray: #CCCCCC;
 $color_black_leather_jacket: #2D312D;
+$color_red_logo: red;
 
 // Dimensiones dispositivos.
 // Smartphone:

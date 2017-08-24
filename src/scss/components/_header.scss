@@ -2,7 +2,6 @@
     width: 100%;
     position: fixed;
     top: 0px;
-    font-family: $main_font_family;
 
     .header_top {
         padding: 5px;
@@ -14,7 +13,6 @@
         .search_article {
             width: 50%;
             text-align: left;
-            font-size: $font_size_base;
             color: $color_black_leather_jacket;
         }
 
@@ -53,7 +51,7 @@
         .web_title {
             padding-right: 10px;
             font-size: $font_size_H1;
-            font-family: $title_font_family;
+            font-family: $custom_font_family_bold;
 
             .admiration {
                 color: red;
@@ -70,6 +68,11 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+
+        .menu_item {
+            font-size: $font_size_large;
+            font-family: $custom_font_family_bold;
+        }
 
     }
 }

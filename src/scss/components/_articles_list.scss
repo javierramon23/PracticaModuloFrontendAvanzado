@@ -1,6 +1,11 @@
 .articles_list {
     box-sizing: border-box;
 
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
     .article {
         box-sizing: border-box;
         width: calc(100% - 20px);
@@ -8,51 +13,50 @@
         max-height: 175px;
         border: 1px solid $color_slate_gray;
         border-radius: 10px;
-        font-family: $body_font_family;
-        font-size: $font_size_small;
         color: $color_black_leather_jacket;
         margin: 0 10px 10px;
-        float:left;
+        //float:left;
         
         // Si el dispositivo es una SMARTPHONE "tumbado".
         @include if_mobile_landscape {
-            font-size: $font_size_base;
+            width: calc((100% / 2) - 20px);
         }
 
         // Si el dispositivo es una TABLET "tumbada".
         @include if_tablet_landscape {
-            width: calc((100% / 2) - 20px);
-            height: 210px;
-            max-height: 210px;
+            width: calc((100% / 3) - 20px);
         }
 
         /* Flexbox */
-        display: flex;
+        display: flex;    
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
 
-        .article_img {
-            width: 100%;
-            height: auto;
-            max-width: 175px;
-            max-height: 175px; 
-            border-radius: 10px;
-
-            // Si el dispositivo es una TABLET "tumbada".
-            @include if_tablet_landscape {
-                max-width: 210px;
-                height: 210px;
-                max-height: 210px;
+        .article_img_div {
+            width: 45%;
+            padding: 10px;
+            
+            .article_img {
+                width: 100%;
+                height: auto;
+                max-height: 140px;
+                max-width: 140px;
+                border-radius: 20px;
             }
         }
 
         .article_info {
-            width: 70%;
+            width: 55%;
             padding: 10px;
 
+            display: flex;
+            flex-direction: column;
+
             .article_title {
-                font-weight: bold;
-                font-size: $font_size_H5;
+                font-family: $custom_font_family_bold;
+                font-size: $font_size_H4;
             }
 
             .article_summary {
@@ -92,18 +96,17 @@
             }
         }
     }
+}
 
-    .pages_browser {
-        font-family: $body_font_family;
-        font-size: $font_size_small;
-        color: $color_black_leather_jacket;
-        text-align: center;
+.pages_browser {
+    font-family: $custom_font_family_bold;
+    color: $color_black_leather_jacket;
+    text-align: center;
 
-        .browser_logo {
-            max-width: 20px;
-            max-height: 20px;
-            padding: 2px;
-            vertical-align: middle;
-        }
+    .browser_logo {
+        max-width: 20px;
+        max-height: 20px;
+        padding: 2px;
+        vertical-align: middle;
     }
 }

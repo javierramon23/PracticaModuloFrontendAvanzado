@@ -5,21 +5,12 @@
     width: 100%;
     padding: 5px;
     background-color: $color_slate_gray;
-    font-size: $font_size_base;
-    font-family: $title_font_family;
+    font-family: $custom_font_family_bold;
 
- 
     /* Flexbox */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
-    .footer_title {
-        .copiright {
-            font-family: $main_font_family;
-            font-size: $font_size_small;
-        }
-    }
 }
