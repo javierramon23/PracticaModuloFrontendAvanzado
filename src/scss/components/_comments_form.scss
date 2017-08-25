@@ -1,0 +1,14 @@
+.comments_form {
+    .iu_status {
+        &.error {
+            text-align: center;
+            background-color: ($color_red_logo);
+            padding: 10px;
+            border: 2px solid $color_red_logo;
+            border-radius: 5px;
+            color: $color_black_leather_jacket;
+            margin: 0px 25px;
+            //display: none;
+        }
+    }
+}

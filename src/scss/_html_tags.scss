@@ -14,6 +14,15 @@ label {
     font-family: $custom_font_family_bold;
 }
 
+form {
+    padding: 10px;
+}
+form label, input{
+    box-sizing: border-box;
+    display:block;
+    width: 100%;
+}
+
 input {
     border: 1px solid $color_black_leather_jacket;
     padding: 2px;
