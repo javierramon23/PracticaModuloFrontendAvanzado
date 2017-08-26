@@ -4,7 +4,6 @@
     top: 0px;
 
     .header_top {
-        padding: 5px;
         display: flex;
         flex-direction: row;
         color: $color_slate_gray;
@@ -14,13 +13,25 @@
             width: 50%;
             text-align: left;
             color: $color_black_leather_jacket;
+
+            .search_form {
+                font-size: $font_size_large;
+                padding: 0px;
+
+                .search_box {
+                    padding: 2px;
+                    display: inline;
+                    width: 75%;
+                }
+            }
+
         }
 
         .web_login {
             width: 50%;
             text-align: right;
-            padding-top: 5px;
-            font-size: $font_size_small;
+            padding-top: 10px;
+            font-size: $font_size_large;
         }
     }
 

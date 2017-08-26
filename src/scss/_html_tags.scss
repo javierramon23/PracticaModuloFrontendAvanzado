@@ -1,8 +1,16 @@
 body {
     font-family: $custom_font_family;
     font-size: $font_size_base;
-    padding-top: 185px;
+    padding-top: 200px;
     padding-bottom: 30px;
+}
+
+strong {
+    font-family: $custom_font_family_bold;
+}
+
+i {
+    font-family: $custom_font_family_italic;
 }
 
 img, embed, object, video {
@@ -10,36 +18,42 @@ img, embed, object, video {
     max-width: 100%;
 }
 
-label {
-    font-family: $custom_font_family_bold;
-}
-
 form {
     padding: 10px;
 }
-form label, input{
+
+label{
     box-sizing: border-box;
+    font-family: $custom_font_family_bold;
     display:block;
     width: 100%;
+    padding: 5px;
 }
 
 input {
-    border: 1px solid $color_black_leather_jacket;
-    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px 10px 0px;
+    border: 1px solid $color_president_assassin;
+    border-radius: 5px;
+    display: block;
+    font-size: $font_size_large;
 
     &:focus {
-        outline-color: $color_red_logo;
+        outline-color: $color_3_for_coral_dark;
     }
 }
 
 button {
+    @extend input;
     &:focus {
-        outline-color: $color_red_logo;
+        outline-color: $color_3_for_coral_dark;
     }
 }
 
 a {
     padding: 5px;
     text-decoration: none;
-    color: $color_black_leather_jacket;
+    color: $color_president_assassin;
 }

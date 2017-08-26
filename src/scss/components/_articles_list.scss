@@ -9,13 +9,12 @@
     .article {
         box-sizing: border-box;
         width: calc(100% - 20px);
-        height: 175px;
-        max-height: 175px;
+        height: 190px;
+        max-height: 190px;
         border: 1px solid $color_slate_gray;
         border-radius: 10px;
         color: $color_black_leather_jacket;
         margin: 0 10px 10px;
-        //float:left;
         
         // Si el dispositivo es una SMARTPHONE "tumbado".
         @include if_mobile_landscape {
@@ -90,8 +89,11 @@
             }
 
             .like_button {
+                padding: 2px;
+                font-size: $font_size_base;
                 border: 2px solid $color_slate_gray;
                 border-radius: 5px;
+                margin: 5px 0px 0px 0px;
                 float:right;
             }
         }

@@ -1,14 +1,40 @@
 .comments_form {
+    font-size: $font_size_large;
+
     .iu_status {
+
         &.error {
             text-align: center;
-            background-color: ($color_red_logo);
+            background-color: $color_3_for_coral_dark;
             padding: 10px;
-            border: 2px solid $color_red_logo;
+            border: 2px solid $color_president_assassin;
             border-radius: 5px;
-            color: $color_black_leather_jacket;
             margin: 0px 25px;
-            //display: none;
+            display: none;
         }
+
+        &.loading {
+            text-align: center;
+            padding: 10px;
+            margin: 0px 25px;
+            display: none;
+        }
+    }
+
+    &.error {
+        .iu_status.error {
+            display: block;
+        }
+    }
+
+    &.loading {
+        .iu_status.loading {
+            display: block;
+        }
+    }
+
+    .form_title {
+        padding: 5px;
+        font-size: $font_size_H3;
     }
 }

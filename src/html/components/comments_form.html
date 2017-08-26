@@ -2,13 +2,19 @@
     
     <div class="iu_status error">
         Se ha producido un error al enviar el comentario...
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
     </div>
 
     <div class="iu_status loading">
         Enviando comentario...
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
     </div>
 
     <div class="iu_status ideal">
+        <div class="form_title">
+            <strong>¿Qué te ha parecido?:</strong>
+        </div>   
+
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" placeholder="Nombre" required>
 
@@ -21,6 +27,9 @@
         <label for="comment">Comentario:</label>
         <input type="text" id="comment" name="comment" placeholder="Mensaje" required>
 
-        <button>Enviar</button>
+        <button>
+            Enviar
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+        </button>
     </div>
 </form>
