@@ -5,7 +5,7 @@
     width: 100%;
     padding: 5px;
     background-color: $color_slate_gray;
-    font-family: $custom_font_family_bold;
+    font-size: $font_size_large;
 
     /* Flexbox */
     display: flex;
@@ -13,4 +13,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+
+    .return_link {
+        color: $color_black_leather_jacket;
+    }
 }

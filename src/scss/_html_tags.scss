@@ -45,8 +45,15 @@ input {
     }
 }
 
+textarea {
+    @extend input;
+}
+
 button {
     @extend input;
+    background-color: $color_air_superiority_blue;
+    border-color: $color_blue_purple;
+    color: $color_white_bone; 
     &:focus {
         outline-color: $color_3_for_coral_dark;
     }
