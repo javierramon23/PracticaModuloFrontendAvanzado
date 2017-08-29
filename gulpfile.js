@@ -36,7 +36,7 @@ gulp.watch(["src/js/*.js","src/js/**/*.js"],["js"]);
 // Tarea que se ejecuta en caso de no especificar ninguna en concreto.
 gulp.task("default",["sass", "html", "js", "img"], function() {
     browserSync.init({
-        server: "dist/",
+        proxy: "http://127.0.0.1:3100",
         browser: "google chrome"
     })
 })

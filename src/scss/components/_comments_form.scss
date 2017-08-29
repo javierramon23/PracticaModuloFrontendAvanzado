@@ -21,7 +21,12 @@
         }
     }
 
+    // Mostramos el estado cuando se produzca.
+    // Cuando el formulario (.comments_form) tenga el estado .error
+    // Se muestra el estado error.
+    // Es decir cuando a la clase comments_form le insertemos la clase .error
     &.error {
+        // Se muestra el estado de error.
         .iu_status.error {
             display: block;
         }
@@ -36,5 +41,9 @@
     .form_title {
         padding: 5px;
         font-size: $font_size_H3;
+    }
+
+    @include if_tablet_landscape {
+
     }
 }
