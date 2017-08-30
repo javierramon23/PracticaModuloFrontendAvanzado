@@ -2,31 +2,13 @@ window.$ = window.jQuery = require("jquery");
 
 import CommentsService from "./commentsService";
 import UIManager from "./uiManager";
+import CommentsListManager from "./commentsListManager";
+import CommentsFormManager from "./commentsFormManager";
 
 const commentsService = new CommentsService("/comments/");
-const uiManager = new UIManager(".comments_list");
+const commentsUIManager = new UIManager(".comments_list");
+const commentsListManager = new CommentsListManager(commentsService, commentsUIManager);
+const commentsFormManager = new CommentsFormManager(".comments_form", commentsService);
 
-commentsService.load(comments =>{
-    if(comments.length == 0){
-        uiManager.setEmpty();
-    } else {
-        let html = "";
-        
-        for(let comment of comments) {
-            html +=`<article class="comment">
-                        <div>${comment.name} ${comment.surname} | ${comment.email}</div>
-                        <p>${comment.text}</p>    
-                    </article>
-                    <br>`;
-        }
-        
-        // Sustituimos el HTML actual por el que hems generado.
-        $(".comments_list .ui_status.ideal").html(html);
-        
-        // Eliminados el estado loading y mostramos el ideal
-        uiManager.setIdeal();
-    }
-}, error =>{
-    uiManager.setError();
-    console.log("Error al cargar los comentarios", error);
-});
+commentsListManager.init();
+commentsFormManager.init();

@@ -22,4 +22,8 @@ export default class UIManager {
     setIdeal() {
         this.element.removeClass(this.uiStateClasses).addClass("ideal");
     }
+
+    setIdealHtml(html){
+        this.element.find(".ui_status.ideal").html(html);
+    }
 }

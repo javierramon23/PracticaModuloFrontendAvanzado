@@ -17,7 +17,7 @@ export default class CommentsService {
     save(comment, successCallback, errorCallback) {
         $.ajax({
             url:this.url,
-            method: post,
+            method: "POST",
             data: comment,
             success: successCallback,
             error: errorCallback

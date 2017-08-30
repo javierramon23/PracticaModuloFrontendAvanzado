@@ -14,23 +14,33 @@
         <div class="form_title">
             <strong>¿Qué te ha parecido?:</strong>
         </div>   
+        <div class="form_control_group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
+        </div>
 
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" placeholder="Nombre" required>
+        <div class="form_control_group">
+            <label for="surname">Apellidos:</label>
+            <input type="text" id="surname" name="surname" placeholder="Apellidos" required>
+        </div>
 
-        <label for="surname">Apellidos:</label>
-        <input type="text" id="surname" name="surname" placeholder="Apellidos" required>
+        <div class="form_control_group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Email" required>
+        <div class="form_control_group">
+            <label for="comment">Comentario:</label>
+            <textarea id="comment" name="comment" cols="30" rows="5" required>
+            </textarea>
+        </div>
 
-        <label for="comment">Comentario:</label>
-        <textarea id="comment" name="comment" cols="30" rows="10" required>
-        </textarea>
+        <div class="form_control_group">
+            <button>
+                Enviar
+                <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            </button>
+        </div>
 
-        <button>
-            Enviar
-            <i class="fa fa-commenting-o" aria-hidden="true"></i>
-        </button>
     </div>
 </form>
