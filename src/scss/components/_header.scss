@@ -6,22 +6,26 @@
     .header_top {
         display: flex;
         flex-direction: row;
-        color: $color_slate_gray;
+        color: $color_black_leather_jacket;
         background: white;
 
         .search_article {
             width: 50%;
             text-align: left;
-            color: $color_black_leather_jacket;
 
             .search_form {
                 font-size: $font_size_large;
                 padding: 0px;
 
+                .search_link {
+                    color: $color_black_leather_jacket;
+                }
+
                 .search_box {
                     padding: 2px;
                     display: inline;
                     width: 75%;
+                    border-color: $color_black_leather_jacket;
                 }
             }
 
@@ -32,6 +36,14 @@
             text-align: right;
             padding-top: 10px;
             font-size: $font_size_large;
+
+            .login_link {
+                color: $color_black_leather_jacket;
+            }
+
+            .sign_link {
+                color: $color_black_leather_jacket;
+            }
         }
     }
 

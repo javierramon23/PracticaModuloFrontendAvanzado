@@ -1,11 +1,45 @@
-.comments_list {
+.comments_list_title {
+    padding: 10px 10px 0px 10px;
+    font-family: $custom_font_family_bold;
+    font-size: $font_size_H3;
+}
 
-    border: 1px solid black;
-    border-radius: 5px;
+.comments_list {
+    font-size: $font_size_large;
+    border: 1px solid $color_president_assassin;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px;
     
-    .comment_list_title {
+    .ui_status {
+        display: none;
+    }
+
+    &.empty {
+        .ui_status.empty {
+            display: block;
+        }
+    }
+
+    &.loading {
+        .ui_status.loading {
+            display: block;
+        }
+    }
+
+    &.error {
+        .ui_status.error {
+            display: block;
+        }
+    }
+
+    &.ideal {
+        .ui_status.ideal {
+            display: block;
+        }
+    }
+
+    &.empty, &.loading, &.error {
 
     }
 

@@ -14,10 +14,10 @@ commentsService.load(comments =>{
         
         for(let comment of comments) {
             html +=`<article class="comment">
-                    <div>Usuario: ${comment.name} ${comment.surname}</div>
-                    <div>Email:${comment.email}</div>
-                    <p>Mensaje:${comment.text}</p>    
-                    </article><br>`;
+                        <div>${comment.name} ${comment.surname} | ${comment.email}</div>
+                        <p>${comment.text}</p>    
+                    </article>
+                    <br>`;
         }
         
         // Sustituimos el HTML actual por el que hems generado.
