@@ -4,9 +4,10 @@ import UIManager from "./UIManager";
 
 export default class CommentsFormManager extends UIManager {
 
-    constructor(elementSelector, commentsService) {
+    constructor(elementSelector, commentsService, pubSub) {
         super(elementSelector);
         this.commentsService = commentsService;
+        this.pubSub = pubSub;
     }
 
     init() {
@@ -38,24 +39,22 @@ export default class CommentsFormManager extends UIManager {
                 return false;
             }
         }
-
         // Falta validar el TEXTAREA
-
         this.setIdeal();
         return true;
     }
 
     sendForm() {
+        this.setLoading();
         const comment = {
             name: this.element.find("#name").val(),
             surname: this.element.find("#surname").val(),
             email: this.element.find("#email").val(),
-            text: this.element.find("#text").val()
+            text: this.element.find("#comment").val()
         }
-        this.setLoading();
 
         this.commentsService.save(comment, success => {
-            // Falta Recargar listado comentarios.
+            this.pubSub.publish("new_comment", comment);
             this.resetForm();
             this.setIdeal();
         }, error => {
@@ -65,5 +64,32 @@ export default class CommentsFormManager extends UIManager {
 
     resetForm() {
         this.element[0].reset();
+    }
+
+    disableForm() {
+        this.element.find("input, button, textarea").attr("disabled",true);
+
+    }
+
+    enableForm() {
+        this.element.find("input, button, textarea").attr("disabled",false);
+    }
+
+    // Reescribimos los métodos:
+    // Ademas de hacer lo que hacían se añade enableForm()
+    // o disableForm() en funcion de lo que se quiera hacer.
+    setLoading() {
+        super.setLoading();
+        this.disableForm();
+    }
+
+    setError() {
+        super.setError();
+        this.enableForm();
+    }
+
+    setIdeal() {
+        super.setIdeal();
+        this.enableForm();
     }
 }
