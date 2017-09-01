@@ -59,14 +59,17 @@
             }
 
             .article_summary {
-                padding: 5px 0 5px 0;
+                margin-bottom: 10px;
+                max-height: 50px;
+                overflow: scroll;
             }
 
             .article_date {
+                margin-bottom: 5px;
             }
 
             .article_comments {
-                padding: 5px 0 0 0;
+                margin-bottom: 5px;
             }
 
             .article_author {
