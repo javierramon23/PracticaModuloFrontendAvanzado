@@ -40,12 +40,17 @@ export default class CommentsListManager {
         this.commentsUIManager.setIdeal();
     }
 
+    getActualDate() {
+        const fecha = new Date();
+        return `${fecha.getDate()}/${fecha.getMonth()}/${fecha.getFullYear()}`;
+    }
+
     renderComment(comment){
-        // Rediseñar como se muestran los formularios.
         return `<article class="comment">
-                    <div>${comment.name} ${comment.surname} | ${comment.email}</div>
-                    <p>${comment.text}</p>    
-                </article>
-                <hr><br>`;
+                    <div class="comment_text"><p>"${comment.text}"</p></div>
+                    <div class="comment_author"><i class="fa fa-user-o" aria-hidden="true"></i> ${comment.name} ${comment.surname}</div>
+                    <div class="comment_date"><i class="fa fa-calendar" aria-hidden="true"></i> ${this.getActualDate()}</div>
+                    <hr>
+                </article>`;
     }
 }

@@ -10,6 +10,29 @@
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
+
+    .comment {
+        .comment_text {
+            margin-bottom: 5px;
+        }
+
+        .comment_author {
+            font-family: $custom_font_family_bold;
+            
+            margin-bottom: 5px;
+        }
+
+        .comment_date {
+            font-size: $font_size_base;
+            margin-bottom: 5px;
+        }
+
+        hr {
+            border: 0px;
+            background-color: $color_3_for_coral_dark;
+            height: 1px;
+        }
+    }
     
     .ui_status {
         display: none;

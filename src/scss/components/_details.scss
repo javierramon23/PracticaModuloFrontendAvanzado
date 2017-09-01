@@ -25,6 +25,10 @@
         .author_detail_img {
             width: 75px;
             height: 75px;
+            border:1px solid black;
+            border-radius: 50%;
+            padding: 5px;
+            margin-bottom: 10px;
         }
     }
 
@@ -35,5 +39,6 @@
 
     .article_detail_text {
         padding: 10px;
+        text-align: justify;
     }
 }
