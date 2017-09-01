@@ -50,5 +50,16 @@
             display: inline-block;
             padding: 0 5px;
         }
+
+        .send_button {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            button {
+                width: 25%;
+            }
+        }
     }
 }

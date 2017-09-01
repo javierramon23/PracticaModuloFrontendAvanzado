@@ -11,7 +11,6 @@ export default class CommentsListManager {
         // Cuando se "escuhe" que se ha creado un nuevo comentario.
         // Recargamos de nuevo la lista para que aparezca.
         this.pubSub.subscribe("new_comment", (topic, comment) => {
-            console.log("yuhuuuu");
             this.loadComments();
         });
     }
@@ -44,9 +43,9 @@ export default class CommentsListManager {
     renderComment(comment){
         // Rediseñar como se muestran los formularios.
         return `<article class="comment">
-                <div>${comment.name} ${comment.surname} | ${comment.email}</div>
-                <p>${comment.text}</p>    
+                    <div>${comment.name} ${comment.surname} | ${comment.email}</div>
+                    <p>${comment.text}</p>    
                 </article>
-                <hr>`;
+                <hr><br>`;
     }
 }
