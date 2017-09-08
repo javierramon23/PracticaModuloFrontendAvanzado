@@ -7,9 +7,7 @@ export default class ArticlesService {
     }
 
     initStorage() {
-        //localStorage.clear();
         const likeVotes = localStorage.votesArray;
-        
         if(likeVotes == undefined){
             const votesArray = {}; 
             for(let i = 0; i < 10; i++) {
@@ -19,11 +17,14 @@ export default class ArticlesService {
         }
     }
 
-    addVote(articleId) {
-        let iLikeItArray 
-        iLikeItArray = JSON.parse(localStorage.getItem("votesArray"));
+    add(articleId) {
+        let iLikeItArray = JSON.parse(localStorage.getItem("votesArray"));
         iLikeItArray[articleId] = iLikeItArray[articleId] + 1;
         localStorage.setItem("votesArray", JSON.stringify(iLikeItArray));
-        console.log(localStorage.votesArray);
+    }
+
+    read(articleId) {
+        let iLikeItArray = JSON.parse(localStorage.getItem("votesArray"));
+        return iLikeItArray[articleId];
     }
 }
